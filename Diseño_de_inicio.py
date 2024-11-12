@@ -55,7 +55,7 @@ st.header("Conjunto de datos")
 # Función para cargar los datos del archivo Excel
 @st.cache
 def load_data():
-    url = "https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2023.xlsx"
+    url = "CÓDIGO/Dataset_1960_2023.xlsx"
     data_raw = pd.read_excel(url)   # Lee el archivo Excel desde el enlace
     data = data_raw.set_index("ID") # Establece la columna 'ID' como índice
     return data
@@ -67,7 +67,7 @@ st.dataframe(data)
 loading.empty()
 
 # El enlace directo al conjunto de datos
-st.write("El dataset del catálogo sísmico se encuentra en el siguiente [link](https://www.datosabiertos.gob.pe/sites/default/files/Catalogo1960_2023.xlsx)")
+st.write("El dataset del catálogo sísmico se encuentra en el siguiente [link](CÓDIGO/Dataset_1960_2023.xlsx)")
 
 # Información sobre las columnas del dataset
 st.subheader("Columnas")
